@@ -3,23 +3,16 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BikeService } from './services/bike.service';
-import { AdminComponent } from './components/admin/admin.component';
-import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ViewRegistrationComponent } from './components/view-registration/view-registration.component';
-import { CallbackComponent } from './components/callback/callback.component';
-import { AuthService } from './services/auth.service';
-import { AuthGuard } from './services/auth.guard';
+import { CardComponent } from './components/card/card.component';
+import { CardService } from './services/card.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
-    HomeComponent,
-    ViewRegistrationComponent,
-    CallbackComponent
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +20,7 @@ import { AuthGuard } from './services/auth.guard';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [BikeService, AuthService, AuthGuard],
+  providers: [CardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
