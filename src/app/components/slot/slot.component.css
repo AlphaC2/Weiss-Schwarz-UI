@@ -1,0 +1,11 @@
+.STANDING{
+    transform: rotate(0deg);
+}
+
+.RESTED{
+    transform: rotate(90deg);
+}
+
+.REVERSED{
+    transform: rotate(180deg);
+}

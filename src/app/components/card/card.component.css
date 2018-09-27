@@ -1,7 +1,7 @@
 img {
     display: block;
     max-width:auto;
-    max-height:300px;
+    max-height:200px;
     width: auto;
     height: auto;
     border-style: solid;
@@ -10,7 +10,7 @@ img {
   }
 
   img:hover {
-    max-height:500px;
+    max-height:300px;
   }
 
   .YELLOW{

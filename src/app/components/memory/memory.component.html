@@ -1,0 +1,8 @@
+<div class='container'>
+    <h1 style ="text-align: center;">Memory: {{memory.length}}</h1>
+    <div class="row">
+        <div *ngFor="let card of memory">
+          <card [card]="card"></card>
+        </div>
+      </div>
+</div>
