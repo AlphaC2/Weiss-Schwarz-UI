@@ -9,14 +9,26 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
     styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-    game: any
+    game: any;
+    buttonText: string;
+    showOpponent: boolean;
     gameform: FormGroup;
     validMessage: string = "";
     constructor(private gameService: GameService, private route: ActivatedRoute) { }
-
     ngOnInit() {
         this.getGame();
+        this.showOpponent = false;
+        this.buttonText = "Opponent's";
         this.gameform = new FormGroup({index: new FormControl('',Validators.required)});
+    }
+
+    click(){
+        this.showOpponent = !this.showOpponent;
+        if (this.showOpponent){
+            this.buttonText = "Your";
+        } else {
+            this.buttonText = "Opponent's";
+        }
     }
 
     getGame() {
@@ -36,6 +48,7 @@ export class GameComponent implements OnInit {
                 data => {
                     this.gameform.reset();
                     this.getGame();
+                    setTimeout( () => {  }, 200 );
                     return true;
                   },
                   error => {

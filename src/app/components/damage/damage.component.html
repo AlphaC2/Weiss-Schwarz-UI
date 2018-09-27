@@ -1,7 +1,7 @@
 <div class='container'>
     <h1 style ="text-align: center;">Damage: {{damage.length}}</h1>
     <div class="row">
-        <div *ngFor="let card of damage">
+        <div class="inner" *ngFor="let card of damage">
           <card [card]="card"></card>
         </div>
       </div>

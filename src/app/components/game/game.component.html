@@ -5,13 +5,19 @@
             <select  class="form-control" formControlName="index" required>
                 <option *ngFor="let item of game.choices ; let i = index;" [value]="i">
                         <span *ngIf='!isObject(item)'>{{item}}</span>
-                        <span *ngIf='isObject(item)'>{{item?.name}}</span>
+                        <span *ngIf='isObject(item)'>{{item?.name}}{{item?.slotType}}</span>
                 </option>
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    <div *ngIf="game.p1?.board != null">
+    <button (click)="click()" class="btn btn-warning" >
+        {{buttonText}} Board
+    </button>
+    <div *ngIf="game.p1?.board != null && !showOpponent">
     	<board [board]="game.p1?.board"></board>
     </div>
+    <div *ngIf="game.p2?.board != null && showOpponent">
+            <board [board]="game.p2?.board"></board>
+        </div>
 </div>
