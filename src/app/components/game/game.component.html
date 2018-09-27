@@ -1,0 +1,14 @@
+<div class="container">
+    <form [formGroup]="gameform" (ngSubmit)="submit()" novalidate>
+        <div class="form-group">
+            <label>{{game.sourcePlayer?.name}} {{game.prompt}}</label>
+            <select  class="form-control" formControlName="index" required>
+                <option *ngFor="let item of game.choices ; let i = index;" [value]="i">
+                        <span *ngIf='!isObject(item)'>{{item}}</span>
+                        <span *ngIf='isObject(item)'>{{item?.name}}</span>
+                </option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -1,3 +1,4 @@
 <div>
-    <img src = "{{card?.imagePath}}" class = {{card?.colour}}>
+    <img *ngIf="card != null" src = "{{card?.imagePath}}" class = {{card?.colour}}>
+    <img *ngIf="card == null" src = "/assets/images/Back.jpg" class = {{card?.colour}}>
 </div>

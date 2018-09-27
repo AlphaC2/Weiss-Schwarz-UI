@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from './components/card/card.component';
 import { CardService } from './services/card.service';
+import { GameComponent } from './components/game/game.component';
+import { GameService } from './services/game.service';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    GameComponent,
     CardComponent
   ],
   imports: [
@@ -20,7 +23,7 @@ import { CardService } from './services/card.service';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [CardService],
+  providers: [CardService, GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
