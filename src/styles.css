@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+label{
+	margin: 20px;
+	font-size: 20px;
+}
+
+.container{
+    max-width:fit-content;
+}
+

@@ -1,12 +1,12 @@
 <div class='container'>
-    <h1 style ="text-align: center;">Stage</h1>
-    <div class="row">
-          <slot [slot]="stage[0]"></slot>
-          <slot [slot]="stage[1]"></slot>
-          <slot [slot]="stage[2]"></slot>
-      </div>
-          <div class="row">
-          <slot [slot]="stage[3]"></slot>
-          <slot [slot]="stage[4]"></slot>
-      </div>
+	<label style="text-align: center;">Stage</label>
+	<div class="row">
+		<slot [slot]="stage[0]"></slot>
+		<slot [slot]="stage[1]"></slot>
+		<slot [slot]="stage[2]"></slot>
+	</div>
+	<div class="row">
+		<slot class="slot" [slot]="stage[3]"></slot>
+		<slot class="slot" [slot]="stage[4]"></slot>
+	</div>
 </div>

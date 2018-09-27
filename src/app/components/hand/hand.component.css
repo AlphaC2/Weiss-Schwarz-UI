@@ -1,0 +1,11 @@
+div.inner{
+    position: relative;
+    top: 0; 
+    margin-right: -100px;
+}
+
+div.inner:hover{
+    position: relative;
+    top: 0; 
+    margin-right: 0px;
+}

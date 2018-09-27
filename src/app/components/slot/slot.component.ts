@@ -9,4 +9,12 @@ import { ActivatedRoute } from '@angular/router';
   })
 export class SlotComponent{
     @Input() slot: any;
+    
+    checkSlot(type: string){
+    	if (type.toUpperCase().includes('FRONT')){
+            return 'front';
+        } else {
+            return 'back';
+        }
+    }
 }

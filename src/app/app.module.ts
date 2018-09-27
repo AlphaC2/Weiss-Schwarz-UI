@@ -18,6 +18,7 @@ import { WaitingroomComponent } from './components/waitingroom/waitingroom.compo
 import { LibraryComponent } from './components/library/library.component';
 import { MemoryComponent } from './components/memory/memory.component';
 import { BoardComponent } from './components/board/board.component';
+import { ClimaxComponent } from './components/climax/climax.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { BoardComponent } from './components/board/board.component';
     WaitingroomComponent,
     LibraryComponent,
     MemoryComponent,
-    BoardComponent
+    BoardComponent,
+    ClimaxComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
-<div>
-    <h5 style="text-align: center;">{{slot.slotType}}</h5>
-    <div class='{{slot.position}}'>
-            <card [card]="slot.character"></card>
-    </div>
+<div class='item'>
+	<div class="slot {{checkSlot(slot.slotType)}}">
+		<h5 style="text-align: center;">{{slot.slotType}}</h5>
+		<div class='{{slot.position}}'>
+			<card [card]="slot.character"></card>
+		</div>
+	</div>
 </div>

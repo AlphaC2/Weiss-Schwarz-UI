@@ -2,8 +2,14 @@
     <stock [stock]="this.board?.stock.cards"></stock>
     <library [library]="board?.library.cards"></library>
     <hand [hand]="board?.hand.cards"></hand>
-    <stage [stage]="board?.stage.slots"></stage>
-    <level [level]="board?.level.cards"></level>
+    <div class="row">
+            <climax [climax]='board?.climaxZone'></climax>
+            <stage [stage]="board?.stage.slots"></stage>
+    </div>
+   <div class = "column">
+        <level [level]="board?.level.cards"></level>
+   </div>
+
     <damage [damage]="board?.damageZone.cards"></damage>
     <memory [memory]="board?.memoryZone.cards"></memory>
     <waitingroom [waitingroom]="board?.waitingRoom.cards"></waitingroom>
