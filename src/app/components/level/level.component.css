@@ -1,0 +1,18 @@
+
+h1{
+    padding-left: 130px;
+}
+
+.container{
+    margin-right: 100px;
+}
+
+div.inner{
+    position: relative;
+    top: 0; 
+    margin-right: -150px;
+}
+
+div.inner:hover{
+    margin-right: 0px;
+}

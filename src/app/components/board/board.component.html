@@ -6,11 +6,12 @@
             <climax [climax]='board?.climaxZone'></climax>
             <stage [stage]="board?.stage.slots"></stage>
     </div>
-   <div class = "column">
+   <div class = "row">
         <level [level]="board?.level.cards"></level>
+        <damage [damage]="board?.damageZone.cards"></damage>
    </div>
 
-    <damage [damage]="board?.damageZone.cards"></damage>
+    
     <memory [memory]="board?.memoryZone.cards"></memory>
     <waitingroom [waitingroom]="board?.waitingRoom.cards"></waitingroom>
 </div>

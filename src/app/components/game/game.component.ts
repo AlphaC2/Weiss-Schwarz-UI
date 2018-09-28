@@ -33,7 +33,12 @@ export class GameComponent implements OnInit {
 
     getGame() {
         this.game  = this.gameService.getGame(this.route.snapshot.params.id).subscribe(
-            data => { this.game = data},
+            data => { this.game = data
+                if (this.game.p2.player.name == this.game.sourcePlayer.name){
+                    console.log("p2 turn");
+                    this.getGame();
+                }
+            },
             err => console.error(err)
         );
     }
@@ -47,8 +52,7 @@ export class GameComponent implements OnInit {
             this.gameService.postChoice(this.gameform.value).subscribe(
                 data => {
                     this.gameform.reset();
-                    this.getGame();
-                    setTimeout( () => {  }, 200 );
+                    setTimeout( () => { this.getGame(); }, 200 );
                     return true;
                   },
                   error => {
