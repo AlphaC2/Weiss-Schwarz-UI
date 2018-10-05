@@ -16,8 +16,8 @@ export class GameService {
     return game;
   }
 
-  postChoice(choice){
-      var response = this.http.post('/server/game?id='+1+'&choice='+choice.index, {headers: new HttpHeaders()});
+  postChoice(id:number, choice){
+      var response = this.http.get('/server/game?id='+id+'&choice='+choice.index, {headers: new HttpHeaders()});
       return response;
   }
 }

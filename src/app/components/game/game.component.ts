@@ -49,14 +49,14 @@ export class GameComponent implements OnInit {
     
     submit() {
         if (this.gameform.valid){
-            this.gameService.postChoice(this.gameform.value).subscribe(
+            this.gameService.postChoice(this.route.snapshot.params.id, this.gameform.value).subscribe(
                 data => {
                     this.gameform.reset();
                     setTimeout( () => { this.getGame(); }, 200 );
                     return true;
                   },
                   error => {
-                    return Observable.throw(error);
+                    /** return Observable.throw(error); */
                   }
             );
         }else {
